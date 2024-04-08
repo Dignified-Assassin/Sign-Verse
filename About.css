@@ -1,0 +1,79 @@
+/* Style the body */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.05); /* Adjust the last value (0.1) to control transparency */
+    position: relative; /* Add relative positioning to enable absolute positioning of the image */
+}
+
+/* Add styles for the column */
+.column {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #f87d02;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+/* Style the subheading */
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: #3B8AA9;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+/* Style the list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style the list items */
+li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the header */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the background image */
+.background-image {
+    position: fixed;
+    top: 150;
+    right: 50;
+    width: 50%;
+    height: 70%; /* Ensure the background image covers the entire height */
+    background-image: url('Images/SignVerse-Bold.jpg');
+    background-size:cover  ; /* Cover the entire area */
+    background-position: top right; /* Position at the top right */
+    z-index: -1; /* Move the background image behind other content */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}

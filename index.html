@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language to Text Converter</title>
+</head>
+<body>
+    <h1>Sign Language to Text Converter</h1>
+    <div>
+        <video id="webcam" width="640" height="480" autoplay></video>
+        <p id="recognizedText"></p>
+    </div>
+
+    <script>
+        // Access webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.getElementById('webcam');
+                video.srcObject = stream;
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                };
+            })
+            .catch(function (err) {
+                console.log("An error occurred: " + err);
+            });
+
+        // Initialize TensorFlow.js or OpenCV.js for sign language recognition
+        // Perform sign language recognition on webcam feed
+        // Update recognized text on the webpage
+    </script>
+</body>
+</html>
