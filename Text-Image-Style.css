@@ -1,0 +1,40 @@
+body {
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0; /* Add margin to prevent default spacing */
+    font-family: Arial, sans-serif; /* Specify a fallback font */
+}
+h1, h2 {
+    text-align: center;
+    font-style: italic;
+}
+.i {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block; /* Use inline-block for better alignment */
+}
+.wrap {
+    display: flex;
+    justify-content: center; /* Center the contents horizontally */
+    align-items: center; /* Center the contents vertically */
+}
+input {
+    padding: 10px; /* Adjust padding for input */
+    margin: 10px; /* Add margin for spacing */
+    background-color: beige;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+button {
+    font-size: 20px;
+    padding: 10px 20px; /* Add padding for button */
+    margin-top: 20px; /* Add margin for spacing */
+}
+div.s {
+    border: 2px solid black;
+    padding: 20px; /* Add padding for content */
+    margin: 20px auto; /* Center the div horizontally and add margin */
+    max-width: 600px; /* Set a maximum width for better layout */
+}
