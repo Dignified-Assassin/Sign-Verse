@@ -1,6 +1,5 @@
 body {
-    background-image: url('Images/SignVerse-Bold.jpg');
-    background-position: right;
+    background-image: url('Images/SignVerse-Faint.jpg');
     background-size: cover;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
@@ -60,14 +59,11 @@ input {
     border-radius: 5px;
 }
 
-button {
-    font-size: 20px;
-    padding: 10px 20px; /* Add padding for button */
-    margin-top: 20px; /* Add margin for spacing */
-}
+
 
 div.s {
     border: 2px solid black;
+    background-color: #47b6df;
     padding: 20px; /* Add padding for content */
     margin: 20px auto; /* Center the div horizontally and add margin */
     max-width: 600px; /* Set a maximum width for better layout */
@@ -90,4 +86,20 @@ div.s {
     display: flex;
     flex-wrap: wrap;
     align-items: right; /* Align input and button vertically */
+}
+.header h3 {
+    font-family: Monospace;
+    font-size: 1cm;
+    color: #e10b0b2b;
+}
+.button2{
+    font-size: 20px;
+    color: rgba(252, 162, 6, 0.427);
+    font: bold;
+    padding: 10px 20px; /* Add padding for button */
+    margin-top: 20px; /* Add margin for spacing */
+    background-color: #8761da;
+}
+.button2:hover {
+    background-color: #5E3A5E;
 }
