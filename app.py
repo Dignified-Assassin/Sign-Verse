@@ -21,11 +21,11 @@ labels = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 @app.route('/')
 def index():
-    return render_template('Website/homepage.html')
+    return render_template('Website/index.html')
 
 @app.route('/camera')
 def camera():
-    return render_template('Website/index.html')
+    return render_template('Website/Sign-To-Text.html')
 
 def gen_frames():
     while True:
