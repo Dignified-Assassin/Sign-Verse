@@ -7,7 +7,6 @@
     <title>SignVerse</title>
     <link rel="stylesheet" href="Text-Image-Style.css">
     
-    
     <script>
         function showGif(inputValue) {
             const gifDisplay = document.getElementById('gifDisplay');
@@ -57,23 +56,23 @@
             } else {
                 gifDisplay.src = '';
             }
-        }
-    </script>
+            }
+</script>
 </head>
 <body background="Images/SignVerse-Faint.jpg">
     <div class="wrap">
         <img src="Images/SignVerse-Bold.jpg" class="i">
         <h1>SIGNVERSE</h1>
     </div>
-    <h2>CONNECTING THROUGH SIGNS</h2>
-    <div class="s">
-        <form>
-            <p><b>Enter Text Here</b></p>
-            <input type="text" size="1" oninput="showGif(this.value)">
-            <button>TRANSLATE TO GIF</button>
-        </form>
-        <button><a href="index.html">BACK TO HOME</a></button>
-    </div>
-    <img id="Text-Sign" src="" class="r">
+<h2>CONNECTING THROUGH SIGNS</h2>
+<div class="s">
+<form>
+<p><b>Enter Text Here</b></p>
+<input type="text" size="1" oninput="showGif(this.value)">
+<button>TRANSLATE TO GIF</button>
+</form>
+<button><a href="index.html">BACK TO HOME</a></button>
+</div>
+<img id="gifDisplay" src="" class="r">
 </body>
 </html>
