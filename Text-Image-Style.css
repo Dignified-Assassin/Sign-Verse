@@ -1,5 +1,6 @@
 body {
-    background-image: url('Images/SignVerse-Faint.jpg');
+    background-image: url('Images/SignVerse-Bold.jpg');
+    background-position: right;
     background-size: cover;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
@@ -75,18 +76,18 @@ div.s {
 .form-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the elements horizontally */
+    justify-content: left; /* Center the elements horizontally */
 }
 
 .s form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the form elements horizontally */
+    justify-content: left; /* Center the form elements horizontally */
     align-items: center; /* Center vertically */
 }
 
 .input-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; /* Align input and button vertically */
+    align-items: right; /* Align input and button vertically */
 }
