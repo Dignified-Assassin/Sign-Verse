@@ -1,8 +1,9 @@
 body {
-    background-repeat: no-repeat;
-    width: 100%;
-    margin: 0; /* Add margin to prevent default spacing */
-    font-family: Arial, sans-serif; /* Specify a fallback font */
+    background-image: url('Images/SignVerse-Faint.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .container {
