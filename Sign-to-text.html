@@ -26,9 +26,17 @@
                 console.log("An error occurred: " + err);
             });
 
-        // Initialize TensorFlow.js or OpenCV.js for sign language recognition
-        // Perform sign language recognition on webcam feed
-        // Update recognized text on the webpage
+        // Function to update recognized text
+        function updateRecognizedText(text) {
+            document.getElementById('recognizedText').textContent = text;
+        }
+
+        // WebSocket to receive prediction updates
+        var socket = new WebSocket('ws://' + window.location.host + '/ws');
+        socket.onmessage = function(event) {
+            var prediction = event.data;
+            updateRecognizedText(prediction);
+        };
     </script>
   
   <div class="header"> <a href="index.html" class="button"><h2>Back To Homepage</h2></a> </div> </body> </html>
