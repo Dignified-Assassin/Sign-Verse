@@ -20,7 +20,7 @@
             <form>
                 <p><b>Enter Text Here</b></p>
                 <div class="input-container">
-                    <input id="textInput" type="text" size="1" onkeypress="handleKeyPress(event)">
+                    <input id="textInput" type="text" size="1" onkeypress="handleKeyPress(event)" oninput="showGif(this.value)">
                     <button type="button2" onclick="showGif(document.getElementById('textInput').value)">TRANSLATE</button>
                 </div>
             </form>
