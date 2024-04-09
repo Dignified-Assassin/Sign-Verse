@@ -14,7 +14,33 @@ h1, h2 {
     margin: 0 auto;
     padding: 20px;
 }
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header h1 {
+    font-style:Bold;
+    font-size:2cm;
+    color: #f87d02;
+}
 
+.header h2 {
+    font-family: Monospace;
+    font-size:1cm;
+    color: #3B8AA9;
+}
 #gifDisplay {
     max-width: 100%;
     height: auto;
