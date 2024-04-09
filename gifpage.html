@@ -6,109 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignVerse</title>
     
-<style>
-body{
-    background-repeat: no-repeat;
-    width: 100%;
-   
-}
-h1{
-    text-align: center;
-    font-style:italic ;
-    display: block;
-    padding-left: 600px;
-}
-h2{
-   text-align: center;
-   font-style:italic ;
-}
+    <style>
+        body {
+            background-repeat: no-repeat;
+            width: 100%;
+            margin: 0; /* Add margin to prevent default spacing */
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+        }
+        h1, h2 {
+            text-align: center;
+            font-style: italic;
+        }
+        .i {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: inline-block; /* Use inline-block for better alignment */
+        }
+        .wrap {
+            display: flex;
+            justify-content: center; /* Center the contents horizontally */
+            align-items: center; /* Center the contents vertically */
+        }
+        input {
+            padding: 10px; /* Adjust padding for input */
+            margin: 10px; /* Add margin for spacing */
+            background-color: beige;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px; /* Add padding for button */
+            margin-top: 20px; /* Add margin for spacing */
+        }
+        div.s {
+            border: 2px solid black;
+            padding: 20px; /* Add padding for content */
+            margin: 20px auto; /* Center the div horizontally and add margin */
+            max-width: 600px; /* Set a maximum width for better layout */
+        }
+    </style>
+    <script>
+        function showGif(inputValue) {
+            const gifDisplay = document.getElementById('gifDisplay');
+            const gifMap = {
+                'A': 'Images/A-Z-signs.png',
+                'B': 'Images/A-Z-signs.png',
+                'C': 'Images/A-Z-signs.png',
+                // Add more mappings as needed for other letters
+            };
 
-.i{
-    height: 150px;
-    width: 150px;
-    border-style:solid ;
-    border-width: 2px;
-    border-radius: 50%;
-    display: inline;
-    
-}
-.wrap{
-    display:flex ;
-    
-    align-items:stretch;
-}
-input{
-    align-content: center;
-    display: inline;
-    padding: 20px;
-    background-color: beige;
-    border: 5px,solid,black;
-    border-width: 2px;
-
-}
-pre{
-    display: inline;
-}
-p{
-    text-align: center;
-    font-size: 30px;
-    font-style: oblique;
-}
-div.s{
-    border-style:solid ;}
-<align=left>
-button{
-font-size: 20px;}
-</style>
-<script>
-function showGif(inputValue) {
-    const gifDisplay = document.getElementById('gifDisplay');
-    // Assuming you have a mapping of letters to GIF URLs
-    const gifMap = {
-        'A': 'Images/A-Z-signs.png',
-        'B': 'Images/A-Z-signs.png',
-        'C': 'Images/A-Z-signs.png',
-        // Add more mappings as needed for other letters
-    };
-
-    // Check if the input value is in the gifMap
-    if (inputValue.toUpperCase() in gifMap) {
-        gifDisplay.src = gifMap[inputValue.toUpperCase()];
-    } else {
-        // If the input value doesn't match any GIF, hide the image
-        gifDisplay.src = '';
-    }
-}
-</script>
-   
-    
+            if (inputValue.toUpperCase() in gifMap) {
+                gifDisplay.src = gifMap[inputValue.toUpperCase()];
+            } else {
+                gifDisplay.src = '';
+            }
+        }
+    </script>
 </head>
-<body  background="file:///D:\Signverse\ABCDE.png">
- <div  >
+<body background="Images/SignVerse-Faint.jpg">
     <div class="wrap">
-<img src="Images/SignVerse-Faint.jpg" class="i">
-  
-    <h1 >
-       
- SIGNVERSE
- </h1></div>
-<h2>CONNECTING THROUGH SIGNS</h2></div>
- <div class="s">
-<form action="">
-    <p ><b>Enter Text Here</b> </p>
-	<>
-    <pre>                                                                                      </pre>
-    <input type="text" size="60" ><br><br><br><br>
-    <pre>                                                                                                </pre>
-    <button> TRANSLATE TO GIF</button>
-</form><br><br><br>
-<pre>                                                                                                 </pre>
-<button><a href="index.html">BACK TO HOME</a></button>
-
-</div>
-<img src="" class="r">
-
-</div>
-  
+        <img src="Images/SignVerse-Bold.jpg" class="i">
+        <h1>SIGNVERSE</h1>
+    </div>
+    <h2>CONNECTING THROUGH SIGNS</h2>
+    <div class="s">
+        <form>
+            <p><b>Enter Text Here</b></p>
+            <input type="text" size="60" oninput="showGif(this.value)">
+            <button>TRANSLATE TO GIF</button>
+        </form>
+        <button><a href="index.html">BACK TO HOME</a></button>
+    </div>
+    <img id="gifDisplay" src="" class="r">
 </body>
 </html>
