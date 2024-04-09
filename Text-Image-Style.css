@@ -8,18 +8,13 @@ h1, h2 {
     text-align: center;
     font-style: italic;
 }
-.i {
-    height: 150px;
-    width: 150px;
-    border: 2px solid black;
-    border-radius: 50%;
-    display: inline-block; /* Use inline-block for better alignment */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-.wrap {
-    display: flex;
-    justify-content: center; /* Center the contents horizontally */
-    align-items: center; /* Center the contents vertically */
-}
+
 #gifDisplay {
     max-width: 100%;
     height: auto;
