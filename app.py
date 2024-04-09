@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response
+from flask_socketio import SocketIO, emit
 import cv2
 import numpy as np
 from cvzone.HandTrackingModule import HandDetector
@@ -6,13 +7,12 @@ from cvzone.ClassificationModule import Classifier
 import math
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret'
+socketio = SocketIO(app)
 
 # Initialize hand detection and classification modules
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=2)
-import tensorflow as tf
-
-
 classifier = Classifier("Model\\keras_model.h5", "Model\\labels.txt")
 
 offset = 20
@@ -76,7 +76,7 @@ def gen_frames():
 
                 prediction, index = classifier.getPrediction(imgWhite, draw=False)
                 if index is not None:
-                    print(labels[index])
+                    emit('prediction', labels[index])  # Send prediction to client
 
             ret, frame = cv2.imencode('.jpg', imgWhite)
             frame_bytes = frame.tobytes()
@@ -87,4 +87,5 @@ def gen_frames():
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
+if __name__ == '__main__':
+    socketio.run(app)
