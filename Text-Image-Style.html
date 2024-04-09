@@ -6,9 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignVerse</title>
     <link rel="stylesheet" href="Text-Image-Style.css">
-    
-    
-    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="button"><h1>Sign-Verse</h1></a>
+            <a href="Sign.html" class="button"><h2>CONNECTING THROUGH SIGNS</h2></a>
+        </div>
+    </div>
+    <div class="s">
+        <div class="form-container">
+            <form>
+                <p><b>Enter Text Here</b></p>
+                <div class="input-container">
+                    <input id="textInput" type="text" size="1" onkeypress="handleKeyPress(event)">
+                    <button type="button" onclick="showGif(document.getElementById('textInput').value)">TRANSLATE TO GIF</button>
+                </div>
+            </form>
+            <button><a href="index.html">BACK TO HOME</a></button>
+        </div>
+        <div class="gif">
+            <img id="gifDisplay" src="" class="r">
+        </div>
+    </div>
+
     <script>
         function showGif(inputValue) {
             const gifDisplay = document.getElementById('gifDisplay');
@@ -65,23 +86,5 @@
             }
         }
     </script>
-</head>
-<body >
-    <div class="container">
-        <div class="header">
-          <a href="index.html" class="button"><h1>Sign-Verse</h1></a>
-          <a href="Sign.html" class="button"><h2>CONNECTING THROUGH SIGNS</h2></a>
-        </div>
-    </div> 
-    <div class="s">
-        <form>
-            <p><b>Enter Text Here</b></p>
-            <input id="textInput" type="text" size="1" onkeypress="handleKeyPress(event)">
-            <button type="button" onclick="showGif(document.getElementById('textInput').value)">TRANSLATE TO GIF</button>
-        </form>
-        <button><a href="index.html">BACK TO HOME</a></button>
-        <img id="gifDisplay" src="" class="r">
-    </div>
-    
 </body>
 </html>

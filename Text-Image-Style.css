@@ -71,3 +71,22 @@ div.s {
     margin: 20px auto; /* Center the div horizontally and add margin */
     max-width: 600px; /* Set a maximum width for better layout */
 }
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the elements horizontally */
+}
+
+.s form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Align input and button vertically */
+}
