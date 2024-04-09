@@ -60,6 +60,26 @@ div.s{
 button{
 font-size: 20px;}
 </style>
+<script>
+function showGif(inputValue) {
+    const gifDisplay = document.getElementById('gifDisplay');
+    // Assuming you have a mapping of letters to GIF URLs
+    const gifMap = {
+        'A': 'Images/A-Z-signs.png',
+        'B': 'Images/A-Z-signs.png',
+        'C': 'Images/A-Z-signs.png',
+        // Add more mappings as needed for other letters
+    };
+
+    // Check if the input value is in the gifMap
+    if (inputValue.toUpperCase() in gifMap) {
+        gifDisplay.src = gifMap[inputValue.toUpperCase()];
+    } else {
+        // If the input value doesn't match any GIF, hide the image
+        gifDisplay.src = '';
+    }
+}
+</script>
    
     
 </head>
